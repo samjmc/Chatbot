@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionManifest xmlns="http://tableausoftware.com/xml/user">
+  <Name>RWA Dashboard Assistant</Name>
+  <Namespace>com.rwa.dashboard-assistant</Namespace>
+  <Version>1.0.0</Version>
+  <Description>
+    RWA Assistant - AI-powered chatbot for Tableau dashboards. Provides intelligent explanations, answers KPI questions, and delivers context-aware insights based on your dashboard data, filters, and parameters.
+  </Description>
+
+  <Author>
+    <Name>Real World Analytics</Name>
+    <Email>support@rwa.com</Email>
+    <Organization>RWA</Organization>
+  </Author>
+
+  <!-- Replace with your actual Replit deployment URL -->
+  <Url>https://replit.dev</Url>
+
+  <MinApiVersion>1.4</MinApiVersion>
+  <AllowDialog>true</AllowDialog>
+  <Scope>Dashboard</Scope>
+  <DefaultHeight>800</DefaultHeight>
+  <Permissions>
+    <Permission>FullData</Permission>
+  </Permissions>
+</ExtensionManifest>
