@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest xmlns="http://tableausoftware.com/xml/user">
+  <Name>TableauTalkBot</Name>
+  <Namespace>com.rwa.tableautalkbot</Namespace>
+  <Version>1.0.0</Version>
+  <Description>
+    AI-powered chatbot extension for Tableau dashboards.
+  </Description>
+  <Author>
+    <Name>Real World Analytics</Name>
+    <Email>support@rwa.com</Email>
+    <Organization>RWA</Organization>
+  </Author>
+  <Url>https://tableau-talk-bot-samjmc3.replit.app</Url>
+  <MinApiVersion>1.4</MinApiVersion>
+  <AllowDialog>true</AllowDialog>
+  <Scope>Dashboard</Scope>
+  <DefaultHeight>600</DefaultHeight>
+</ExtensionManifest>
