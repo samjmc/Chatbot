@@ -152,9 +152,7 @@ export default function ChatWidget({ tableauReady = false, dashboardData = null 
         },
         body: JSON.stringify({
           message: userMessage,
-          context: dashboardContext,
-          isTableauConnected,
-          dashboardData: dashboardData
+          dashboardContext,
         }),
       });
 
