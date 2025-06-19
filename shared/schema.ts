@@ -1,4 +1,4 @@
-import { pgTable, text, serial, timestamp, jsonb } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, timestamp, jsonb } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -20,7 +20,7 @@ export type User = typeof users.$inferSelect;
 // Conversations model
 export const conversations = pgTable("conversations", {
   id: serial("id").primaryKey(),
-  userId: serial("user_id").references(() => users.id),
+  userId: integer("user_id").references(() => users.id),
   title: text("title").default("New Conversation"),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
@@ -37,7 +37,7 @@ export type Conversation = typeof conversations.$inferSelect;
 // Messages model
 export const messages = pgTable("messages", {
   id: serial("id").primaryKey(),
-  conversationId: serial("conversation_id").references(() => conversations.id),
+  conversationId: integer("conversation_id").references(() => conversations.id),
   role: text("role").notNull(), // 'user' or 'assistant'
   content: text("content").notNull(),
   context: jsonb("context"), // Dashboard context data
